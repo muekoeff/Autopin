@@ -1,0 +1,25 @@
+{
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "description": "Automatically pins a given tab at the very first position once it has been opened",
+    "icons": {
+        "16": "data/icons/favicon-16.png",
+        "24": "data/icons/favicon-24.png",
+        "256": "data/icons/favicon-256.png",
+        "32": "data/icons/favicon-32.png",
+        "48": "data/icons/favicon-48.png"
+    },
+    "manifest_version": 2,
+    "name": "Autopin",
+    "options_ui": {
+		"page": "options.html"
+	},
+    "permissions": [
+    	"storage",
+        "tabs"
+    ],
+    "version": "1.2"
+}

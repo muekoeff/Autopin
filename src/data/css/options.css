@@ -1,0 +1,9 @@
+input[type=text] {
+	width: 100%;
+}
+table {
+	width: 100%;
+}
+tr:nth-child(1) {
+	width: 1%;
+}
