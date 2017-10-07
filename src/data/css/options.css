@@ -4,6 +4,3 @@ input[type=text] {
 table {
 	width: 100%;
 }
-tr:nth-child(1) {
-	width: 1%;
-}

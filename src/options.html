@@ -7,22 +7,13 @@
 
 <body>
 	<form>
-		<table>
-			<tbody>
-				<tr>
-					<td><label>Autopinned&nbsp;url-regex</label></td>
-					<td><input type="text" id="uri" placeholder="sample.org/.*" /></td>
-				</tr>
-				<tr>
-					<td><label>Disable after pin</label></td>
-					<td><input type="checkbox" id="disable" value="true" /></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><button type="submit">Save</button></td>
-				</tr>
-			</tbody>
+		<table id="uriTable">
+			<tr>
+				<th><label>Url-regex</label></th>
+				<th><label>Pin only once per session?</label></th>
+			</tr>
 		</table>
+		<button type="submit">Save</button> <button id="addRow" type="button">Add row</button>
 	</form>
 	<script src="data/js/options.js"></script>
 </body>

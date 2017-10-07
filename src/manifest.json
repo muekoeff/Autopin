@@ -5,6 +5,10 @@
         ]
     },
     "description": "Automatically pins a given tab at the very first position once it has been opened",
+    "developer": {
+        "name": "nw520",
+        "url": "https://nw520.de/"
+    },
     "icons": {
         "16": "data/icons/favicon-16.png",
         "24": "data/icons/favicon-24.png",
@@ -21,5 +25,5 @@
     	"storage",
         "tabs"
     ],
-    "version": "1.2"
+    "version": "1.3"
 }
