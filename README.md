@@ -1,3 +1,2 @@
 # Autopin
-
-    Automatically pins a given tab at the very first position once it has been opened
+_Automatically pins tabs once they have been opened_

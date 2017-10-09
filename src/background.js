@@ -34,8 +34,8 @@ function pin(newTab) {
 					return false;
 				}
 			}
-
-			return false;
+			// Continue loop
+			return true;
 		});
 	}
 }
