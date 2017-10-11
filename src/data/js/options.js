@@ -39,10 +39,12 @@ function saveOptions(e) {
 	var rows = document.querySelectorAll(".uriRow");
 	var rowData = [];
 	rows.forEach(function(element) {
-		rowData.push({
-			disable: element.getElementsByClassName("item--disable")[0].checked,
-			uri: element.getElementsByClassName("item--uri")[0].value
-		});
+		if(element.getElementsByClassName("item--uri")[0].value !== "") {
+			rowData.push({
+				disable: element.getElementsByClassName("item--disable")[0].checked,
+				uri: element.getElementsByClassName("item--uri")[0].value
+			});
+		}
 	});
 
 	browser.storage.local.set({
