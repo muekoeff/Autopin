@@ -12,7 +12,7 @@ document.querySelector("#addRow").addEventListener("click", addUriRow);
 
 function addUriRow() {
 	document.querySelector("#uriTable").insertAdjacentHTML("beforeend", `<tr class="uriRow">
-		<td><input class="item--uri" type="text" placeholder="^[https?://]?example.com/.*" /></td>
+		<td><input class="item--uri" type="text" placeholder="^https?://example.com/*" /></td>
 		<td><input class="item--onlycreation" type="checkbox" value="true" /></td>
 		<td><input class="item--disable" type="checkbox" value="true" /></td>
 	</tr>`);

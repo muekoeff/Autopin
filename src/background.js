@@ -76,9 +76,9 @@ function pinTab(newTab, settingEntry) {
 		}).then(function() {
 			if(!"disable" in settingEntry || settingEntry.disable) autopin.disabledUris[settingEntry.uri] = true;
 		});
-		return true;
-	} else {
 		return false;
+	} else {
+		return true;
 	}
 }
 function onTabCreated(newTab, updated) {
@@ -86,16 +86,19 @@ function onTabCreated(newTab, updated) {
 
 	if(newTab.pinned == false && "uris" in autopin) {
 		autopin.uris.every(function(settingEntry) {
+			console.log(settingEntry);
 			if(settingEntry.onlyCreation === true && updated !== true) {
 				if(newTab.url == "about:blank" && newTab.title.match(settingEntry.uri)) {
+					console.log("match");
 					return pinTab(newTab, settingEntry);
 				}
 			} else {
 				if(newTab.url.match(settingEntry.uri)) {
+					console.log("match");
 					return pinTab(newTab, settingEntry);
 				}
 			}
-			return false;
+			return true;
 		});
 	}
 }

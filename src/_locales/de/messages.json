@@ -12,7 +12,7 @@
     "message": "Generell"
   },
   "options_notes": {
-    "message": "<strong>Hinweise</strong>\n<ul>\n\t<li><strong><i>Nur bei neuem Tab pinnen</i>-Modus:</strong> In der URL-RegEx nicht das Protokoll matchen, z.B. <code>^example.com/</code> oder <code>^example.com/foo/bar$</code></li>\n\t<li><strong>Nicht-<i>Nur bei neuem Tab pinnen</i>-Modus:</strong> In der URL-RegEx auch das Protokoll matchen, z.B. <code>^https?://example.com/</code> oder <code>^https?://example.com/foo/bar$</code></li>\n\t<li>Ein Eintrag kann entfernt werden, indem das <i>URL-RegEx</i>-Textfeld geleert wird.</li>\n</ul>"
+    "message": "<strong>Hinweise</strong>\n<ul>\n\t<li><strong><i>Nur bei neuem Tab pinnen</i>-Modus:</strong> In der URL-RegEx nicht das Protokoll matchen, z.B. code>example.com/</code> oder <code>^example.com/</code> oder <code>^example.com/foo/bar$</code></li>\n\t<li><strong>Nicht-<i>Nur bei neuem Tab pinnen</i>-Modus:</strong> In der URL-RegEx auch das Protokoll matchen, z.B. <code>example.com/</code> oder <code>^https?://example.com/</code> oder <code>^https?://example.com/foo/bar$</code></li>\n\t<li>Ein Eintrag kann entfernt werden, indem das <i>URL-RegEx</i>-Textfeld geleert wird.</li>\n</ul>"
   },
   "options_onlyCreation": {
     "message": "Nur bei neuem Tab pinnen"
