@@ -5,7 +5,8 @@
 			"background.js"
 		]
 	},
-	"description": "Automatically pins tabs once they have been opened",
+	"default_locale": "en",
+	"description": "__MSG_extension_description__",
 	"homepage_url": "https://github.com/naseweis520/Autopin",
 	"icons": {
 		"16": "data/icons/favicon-16.png",
@@ -15,7 +16,7 @@
 		"48": "data/icons/favicon-48.png"
 	},
 	"manifest_version": 2,
-	"name": "Autopin",
+	"name": "__MSG_extension_name__",
 	"options_ui": {
 		"page": "options.html"
 	},
@@ -23,5 +24,5 @@
 		"storage",
 		"tabs"
 	],
-	"version": "2.0"
+	"version": "2.1"
 }

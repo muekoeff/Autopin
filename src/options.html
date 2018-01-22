@@ -1,20 +1,35 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<link href="data/css/options.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="data/css/options.css" />
+	<title data-localized="options_title">{{options_title}}</title>
 </head>
-
 <body>
-	<form>
-		<table id="uriTable">
-			<tr>
-				<th><label>Url-regex</label></th>
-				<th><label>Pin only once per session?</label></th>
-			</tr>
-		</table>
-		<button type="submit">Save</button> <button id="addRow" type="button">Add row</button>
-	</form>
+	<div class="panel">
+		<div class="panel-section panel-section-header">
+			<div class="text-section-header" data-localized="options_header_general">{{options_header_general}}</div>
+		</div>
+		<div class="panel-section-formElements">
+				<div class="browser-style" data-localized="options_notes">{{options_notes}}</div>
+			<form>
+				<div class="browser-style panel-formElements-item">	
+					<table id="uriTable">
+						<tr>
+							<th><label data-localized="options_urlRegex">{{options_urlRegex}}</label></th>
+							<th style="white-space:nowrap;width:1px;"><label data-localized="options_onlyCreation">{{options_onlyCreation}}</label></th>
+							<th style="white-space:nowrap;width:1px;"><label data-localized="options_pinOnlyOnce">{{options_pinOnlyOnce}}</label></th>
+						</tr>
+					</table>
+				</div>
+				<div class="browser-style panel-formElements-item">
+					<button class="browser-style default" type="submit" data-localized="options_save">{{options_save}}</button>&nbsp;
+					<button id="addRow" class="browser-style" type="button" data-localized="options_addRow">{{options_addRow}}</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="data/js/i18n.js"></script>
 	<script src="data/js/options.js"></script>
 </body>
 </html>

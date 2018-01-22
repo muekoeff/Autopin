@@ -1,15 +1,25 @@
+const MESSAGE_COMMANDS = {
+	reloadSettings: "reloadSettings"
+};
+
+// ---
+
+document.addEventListener("DOMContentLoaded", restoreOptions);
+document.querySelector("form").addEventListener("submit", saveOptions);
 document.querySelector("#addRow").addEventListener("click", addUriRow);
+
+// ---
+
 function addUriRow() {
 	document.querySelector("#uriTable").insertAdjacentHTML("beforeend", `<tr class="uriRow">
-		<td><input class="item--uri" type="text" placeholder="sample.org/.*" /></td>
+		<td><input class="item--uri" type="text" placeholder="^[https?://]?example.com/.*" /></td>
+		<td><input class="item--onlycreation" type="checkbox" value="true" /></td>
 		<td><input class="item--disable" type="checkbox" value="true" /></td>
 	</tr>`);
 
 	var rows = document.getElementsByClassName("uriRow");
 	return rows[rows.length - 1];
 }
-
-document.addEventListener("DOMContentLoaded", restoreOptions);
 function restoreOptions() {
 	function setCurrentChoice(result) {
 		if(result.uris != null) {
@@ -17,6 +27,7 @@ function restoreOptions() {
 			uris.forEach(function(element) {
 				var row = addUriRow();
 				row.getElementsByClassName("item--disable")[0].checked = element.disable || false;
+				row.getElementsByClassName("item--onlycreation")[0].checked = element.onlyCreation || false;
 				row.getElementsByClassName("item--uri")[0].value = element.uri || "";
 			});
 		} else {
@@ -31,8 +42,6 @@ function restoreOptions() {
 	var getting = browser.storage.local.get();
 	getting.then(setCurrentChoice, onError);
 }
-
-document.querySelector("form").addEventListener("submit", saveOptions);
 function saveOptions(e) {
 	e.preventDefault();
 
@@ -42,6 +51,7 @@ function saveOptions(e) {
 		if(element.getElementsByClassName("item--uri")[0].value !== "") {
 			rowData.push({
 				disable: element.getElementsByClassName("item--disable")[0].checked,
+				onlyCreation: element.getElementsByClassName("item--onlycreation")[0].checked,
 				uri: element.getElementsByClassName("item--uri")[0].value
 			});
 		}
@@ -49,6 +59,9 @@ function saveOptions(e) {
 
 	browser.storage.local.set({
 		uris: JSON.stringify(rowData)
+	}, function() {
+		browser.runtime.sendMessage({
+			command: MESSAGE_COMMANDS.reloadSettings
+		});
 	});
-	browser.runtime.reload();
 }

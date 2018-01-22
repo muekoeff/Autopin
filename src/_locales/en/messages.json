@@ -1,0 +1,32 @@
+{
+  "extension_description": {
+    "message": "Automatically pins tabs once they have been opened"
+  },
+  "extension_name": {
+    "message": "Autopin"
+  },
+  "options_addRow": {
+    "message": "Add row"
+  },
+  "options_header_general": {
+    "message": "General"
+  },
+  "options_notes": {
+    "message": "<strong>Notes</strong>\n<ul>\n\t<li><strong><i>Pin only on new tab</i>-mode:</strong> Don't match protocol in URL-RegEx, e.g. <code>^example.com/</code> or <code>^example.com/foo/bar$</code></li>\n\t<li><strong>Not-<i>in only on new tab</i>-mode:</strong> Match protocol in URL-RegEx, e.g. <code>^https?://example.com/</code> or <code>^https?://example.com/foo/bar$</code></li>\n\t<li>An entry kann be removed by emptying the <i>URL-RegEx</i>-text field.</li>\n</ul>"
+  },
+  "options_onlyCreation": {
+    "message": "Pin only on new tab"
+  },
+  "options_pinOnlyOnce": {
+    "message": "Pin only once per session"
+  },
+  "options_save": {
+    "message": "Save"
+  },
+  "options_title": {
+    "message": "Options"
+  },
+  "options_urlRegex": {
+    "message": "URL-RegEx"
+  }
+}
